@@ -11,7 +11,8 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 public class MailConfig {
     
     @Value("${appEmail.email}")
-    public String email; // test
+    public String email; // test 2d test
+
 
     @Value("${appEmail.password}")
     public String password;
@@ -32,7 +33,7 @@ public class MailConfig {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.debug", "true");
 
-
+        System.out.println("JavaMailSender");
         return mailSender;
     }
 }
