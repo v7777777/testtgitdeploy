@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    url: jdbc:${JAWSDB_URL:mysql://localhost:3306/programmersblog?serverTimezone=UTC} #CLEARDB_DATABASE_URL
+    username: root
+    password: 1234567
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+server:
+  port: ${PORT:8080}
+
+  #  ${} если в параметрах запуска есть параметр PORT - используй его или значение по умолчанию 8080.
+  # Аналогично в CLEARDB_DATABASE_URL
+
+blog:
+  title: DevPub
+  subtitle: Рассказы разработчиков
+  phone: +7 903 666-44-55
+  email: mail@mail.ru
+  copyright: Дмитрий Сергеев
+  copyrightFrom: 2005
+
+delete:
+  expiredCaptcha: 240
+
+upload:
+  path: src/main/resources/static/upload
+  url: /usr_img/
+  image:
+    newsLineWidth: 752
+    profileWidth: 36
+
+
+
+appEmail:
+  email: progbloggg@gmail.com
+  password: lrzlicambdmlockl
+
+
